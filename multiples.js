@@ -1,22 +1,10 @@
 function solution(number){
-    let list = [];
-    for (i = 0; i < number; i++) {
-      list.push(i);
-    }
+  var sum = 0;
   
-    let ar = [];
-    
-    for (i = 0; i <list.length; i++) {
-      
-      if (list[i] % 3 == 0 || list[i] % 5 == 0) {
-        ar.push(list[i]);
-      
-      }
-      
+  for(var i = 1;i< number; i++){
+    if(i % 3 == 0 || i % 5 == 0){
+      sum += i
     }
-    let result = 0;
-    ar.forEach(value =>{
-      result += value;
-    });
-    return result;
   }
+  return sum;
+}
